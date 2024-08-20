@@ -47,7 +47,7 @@
                 'password' => $wallet_password,
                 'recipient' => $duco_address,
                 'amount' => $amount,
-                'memo' => 'TinyFaucet | PythonScratcher'
+                'memo' => 'katfaucet'
             );
             $send_result = file_get_contents($send_url.'?'.http_build_query($send_data));
             if($send_result === false || $send_result == '') {
@@ -70,7 +70,7 @@
     <form method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
         <label for="duco_address">DuinoCoin Username:</label>
         <input type="text" name="duco_address" id="duco_address" required>
-        <div class="h-captcha" data-sitekey="KEYHERE"></div>
+        <div class="h-captcha" data-sitekey="06d2f768-f000-4084-a2bc-1c009afcd588"></div>
         <input type="submit" value="Claim Now">
     </form>
 </div>
